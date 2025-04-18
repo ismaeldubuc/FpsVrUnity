@@ -1,41 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PhoneCameraController : MonoBehaviour
+public class ARCameraBackground : MonoBehaviour
 {
     private WebCamTexture webCamTexture;
-    public RawImage displayImage;
+    public RawImage backgroundImage;
+    public AspectRatioFitter aspectFitter;
     
     void Start()
     {
-        // Vérifier si des caméras sont disponibles
-        if (WebCamTexture.devices.Length == 0)
-        {
-            Debug.Log("Aucune caméra détectée");
-            return;
-        }
-        
-        // Utiliser la caméra arrière par défaut (pour la caméra frontale, modifiez l'index)
-        webCamTexture = new WebCamTexture(WebCamTexture.devices[0].name, 1280, 720, 30);
-        
-        // Affecter la texture à l'image UI
-        displayImage.texture = webCamTexture;
-        
-        // Démarrer la caméra
-        webCamTexture.Play();
+        Input.gyro.enabled = true;
     }
     
     void Update()
     {
-        // Si nécessaire, ajustez la rotation selon l'orientation de l'appareil
-        if (webCamTexture.isPlaying)
-        {
-            float scaleY = webCamTexture.videoVerticallyMirrored ? -1f : 1f;
-            displayImage.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
-            
-            int angle = -webCamTexture.videoRotationAngle;
-            displayImage.rectTransform.localEulerAngles = new Vector3(0, 0, angle);
-        }
+        Quaternion deviceRotation = Input.gyro.attitude;
+        deviceRotation = Quaternion.Euler(90f, 0f, 0f) * new
+            Quaternion(-deviceRotation.x, -deviceRotation.y, deviceRotation.z,
+                deviceRotation.w);
+        transform.localRotation = deviceRotation;
     }
     
     void OnDisable()
