@@ -534,7 +534,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d833079ed1e9644aaa8945e582fcb92b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1400,6 +1400,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8346147764693501487}
   - component: {fileID: 7144235658833272589}
+  - component: {fileID: 562117332696585024}
+  - component: {fileID: 436022789161091966}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -1446,6 +1448,36 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.84, z: 0}
+--- !u!114 &562117332696585024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8529845436270367369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047e0700ba84a4ca08cb1df32effb4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4743042427085791156}
+  robotMover: {fileID: 436022789161091966}
+--- !u!114 &436022789161091966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8529845436270367369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6ca016e3b7e429986e0aeb5749479b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  stopDistance: 2
+  delayBeforeRestart: 2
+  isDead: 0
 --- !u!1 &9134649480989909803
 GameObject:
   m_ObjectHideFlags: 0
