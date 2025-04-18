@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class BulletCollision : MonoBehaviour
 {
+    public Animator animator;
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            Debug.Log("Enemy Hit by Trigger!");
-            Destroy(gameObject);
-        }
+        animator.Play("Hit");
+        Destroy(other.gameObject);
+    }
+
+    public void Hit()
+    {
+        gameObject.SetActive(false);
     }
 }
