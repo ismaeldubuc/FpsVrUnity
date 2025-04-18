@@ -6,6 +6,8 @@ TagManager:
   tags:
   - score_txt
   - life_tag
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
