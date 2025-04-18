@@ -294,7 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7769b7a3b51e54d0ab91e9a51b049ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robotPrefab: {fileID: 0}
+  robotPrefab: {fileID: 8529845436270367369, guid: 171e41ec0f78749ba9e888f259e1105c,
+    type: 3}
   spawnInterval: 2
   spawnDistance: 10
 --- !u!1 &985799381
