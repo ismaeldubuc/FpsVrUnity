@@ -1156,7 +1156,12 @@ PrefabInstance:
     - target: {fileID: 1533875343800185213, guid: 71d18958e341e41a8aefa7d4ab88ef7f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726538546982622750, guid: 71d18958e341e41a8aefa7d4ab88ef7f,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5685344656323221484, guid: 71d18958e341e41a8aefa7d4ab88ef7f,
         type: 3}
