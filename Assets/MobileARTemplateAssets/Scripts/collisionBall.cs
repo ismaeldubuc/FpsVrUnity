@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BulletCollision : MonoBehaviour
 {
@@ -9,32 +10,19 @@ public class BulletCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("Bullet"))
         {
+            Score.Increment();
             Debug.Log("SCORE AUGMENTÉ → Nouveau score: " + Score.GetScore());
             animator.Play("Hit");
             Destroy(other.gameObject);
             robotMover.isDead = true;
-            Score.Increment();
         }
-        else if(other.CompareTag("MainCamera"))
+        else 
         {
-            Hit();
-            if (Score.GetScore() == 0)
-            {
-                Debug.Log("game over");
-                // game over
-            }
-            else
-            {
-                Score.Decrement();
-                Debug.Log("SCORE REDUIT → Nouveau score: " + Score.GetScore());
-            }
-            //tu fait perdre les pv au joueur, parcequ'il a été touché par le robot
+            Score.Decrement();
+            Debug.Log("SCORE REDUIT → Nouveau score: " + Score.GetScore());
         }
-        
-        
     }
 
     public void Hit()

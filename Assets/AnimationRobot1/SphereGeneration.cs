@@ -70,5 +70,6 @@ public class RobotMover : MonoBehaviour
         if (col != null) col.enabled = true;
 
         isResetting = false;
+        
     }
 }
