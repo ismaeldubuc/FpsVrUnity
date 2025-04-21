@@ -1479,6 +1479,8 @@ MonoBehaviour:
   stopDistance: 2
   delayBeforeRestart: 2
   isDead: 0
+  gameOverCanvas: {fileID: 5685344656323221484, guid: 71d18958e341e41a8aefa7d4ab88ef7f,
+    type: 3}
 --- !u!1 &9134649480989909803
 GameObject:
   m_ObjectHideFlags: 0

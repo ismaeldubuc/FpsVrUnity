@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
+
 
 public class RobotMover : MonoBehaviour
 {
@@ -14,7 +16,8 @@ public class RobotMover : MonoBehaviour
     private Renderer rend;
     private Collider col;
     
-
+    public GameObject gameOverCanvas;
+    
     void Start()
     {
         cam = Camera.main?.transform;
@@ -57,8 +60,9 @@ public class RobotMover : MonoBehaviour
 
     IEnumerator ResetRobot()
     {
+        Debug.Log("partie terminée");
         isResetting = true;
-
+        
         if (rend != null) rend.enabled = false;
         if (col != null) col.enabled = false;
 
@@ -70,6 +74,5 @@ public class RobotMover : MonoBehaviour
         if (col != null) col.enabled = true;
 
         isResetting = false;
-        
     }
 }
