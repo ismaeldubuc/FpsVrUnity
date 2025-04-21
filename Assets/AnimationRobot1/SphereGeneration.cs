@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class RobotMover : MonoBehaviour
@@ -60,19 +61,14 @@ public class RobotMover : MonoBehaviour
 
     IEnumerator ResetRobot()
     {
-        Debug.Log("partie terminée");
+        Debug.Log("Partie terminée");
         isResetting = true;
-        
+
         if (rend != null) rend.enabled = false;
         if (col != null) col.enabled = false;
 
         yield return new WaitForSeconds(delayBeforeRestart);
 
-        transform.position = startPos;
-
-        if (rend != null) rend.enabled = true;
-        if (col != null) col.enabled = true;
-
-        isResetting = false;
+        SceneManager.LoadScene("gameOverScene");
     }
 }
