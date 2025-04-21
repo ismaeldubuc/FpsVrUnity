@@ -1462,6 +1462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4743042427085791156}
   robotMover: {fileID: 436022789161091966}
+  Score: {fileID: 1773795420202063240, guid: db06b4b5fe9f84a3d8dfe5cc8dab2090, type: 3}
 --- !u!114 &436022789161091966
 MonoBehaviour:
   m_ObjectHideFlags: 0

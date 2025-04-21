@@ -1,10 +1,12 @@
-public class Score
+using UnityEngine;
+
+public class Score : MonoBehaviour
 {
-    public int Value { get; private set; }
+    [SerializeField] private int value = 10;
+    
+    public int Value => value;
 
-    public Score() { Value = 0; }
-
-    public void Increment() => Value++;
-    public void Decrement() { if (Value > 0) Value--; }
-    public int GetScore() => Value;
+    public void Increment() => value++;
+    public void Decrement() { if (value > 0) value--; }
+    public int GetScore() => value;
 }
