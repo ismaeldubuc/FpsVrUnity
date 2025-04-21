@@ -12,16 +12,36 @@ public class BulletCollision : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            Score.Increment();
-            Debug.Log("SCORE AUGMENTÉ → Nouveau score: " + Score.GetScore());
-            animator.Play("Hit");
+            if (Score != null)
+            {
+                
+                Score.Increment();
+                Debug.Log("SCORE AUGMENTÉ → Nouveau score: " + Score.GetScore());
+            }
+            else
+            {
+                Debug.LogWarning("Score n'est pas assigné.");
+            }
+
+            if (animator != null)
+            {
+                animator.Play("Hit");
+            }
+            else
+            {
+                Debug.LogWarning("Animator n'est pas assigné.");
+            }
+
             Destroy(other.gameObject);
-            robotMover.isDead = true;
-        }
-        else 
-        {
-            Score.Decrement();
-            Debug.Log("SCORE REDUIT → Nouveau score: " + Score.GetScore());
+
+            if (robotMover != null)
+            {
+                robotMover.isDead = true;
+            }
+            else
+            {
+                Debug.LogWarning("RobotMover n'est pas assigné.");
+            }
         }
     }
 
