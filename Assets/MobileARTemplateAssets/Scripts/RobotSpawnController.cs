@@ -3,6 +3,7 @@ using UnityEngine;
 public class RobotSpawnController : MonoBehaviour
 {
     public GameObject robotPrefab;
+    public Score score;
     public float spawnInterval = 2f;
     public float spawnDistance = 10f;
     void Start()
@@ -18,6 +19,7 @@ public class RobotSpawnController : MonoBehaviour
         spawnPosition = new Vector3(spawnPosition.x, transform.position.y, spawnPosition.z);
         GameObject robot = Instantiate(robotPrefab, spawnPosition,
             Quaternion.identity);
+        robot.GetComponent<BulletCollision>().Score = score;
         
     }
 }

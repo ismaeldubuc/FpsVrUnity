@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
         if (scoreObj != null)
         {
             scoreText = scoreObj.GetComponent<TextMeshProUGUI>();
-            UpdateScoreText(); // Affiche "Score : 0" au départ
+            UpdateScoreText();
         }
         else
         {
@@ -78,6 +78,8 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score : " + score.Value;
-        }
+        } else {
+			 Debug.Log("Score text non asssigné");
+		}
     }
 }

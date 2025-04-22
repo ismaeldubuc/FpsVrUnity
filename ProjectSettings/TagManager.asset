@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - score_txt
+  - life_tag
   - Enemy
   - Bullet
+  - score_tag
   layers:
   - Default
   - TransparentFX

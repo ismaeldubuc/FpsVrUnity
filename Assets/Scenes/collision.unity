@@ -141,7 +141,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 703552688}
+      objectReference: {fileID: 0}
     - target: {fileID: 8149960128838076918, guid: db06b4b5fe9f84a3d8dfe5cc8dab2090,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -257,18 +257,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db06b4b5fe9f84a3d8dfe5cc8dab2090, type: 3}
---- !u!114 &703552688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3669328254709178121, guid: db06b4b5fe9f84a3d8dfe5cc8dab2090,
-    type: 3}
-  m_PrefabInstance: {fileID: 559298752}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &713866528
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robotPrefab: {fileID: 8529845436270367369, guid: 171e41ec0f78749ba9e888f259e1105c,
     type: 3}
+  score: {fileID: 1917982780}
   spawnInterval: 5
   spawnDistance: 20
 --- !u!1 &985799381
@@ -1059,6 +1048,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c03ad92dcab2c42c8bc6e0cf1152200c, type: 3}
+--- !u!114 &1917982780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2305491990456836102, guid: db06b4b5fe9f84a3d8dfe5cc8dab2090,
+    type: 3}
+  m_PrefabInstance: {fileID: 559298752}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b151172bbbc745be994843f536b34ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

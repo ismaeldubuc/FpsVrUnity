@@ -33,10 +33,10 @@ public class Score : MonoBehaviour
     private void UpdateScoreDisplay()
     {
 		if (scoreText == null)
-    {
-        Debug.LogWarning("scoreText n'est pas assigné !");
-        return;
-    }
+        {
+            Debug.LogWarning("scoreText n'est pas assigné !");
+            return;
+        }
         scoreText.text = "Score : " + value;
     }
 }

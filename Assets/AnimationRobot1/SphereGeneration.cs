@@ -48,7 +48,7 @@ public class RobotMover : MonoBehaviour
             StartCoroutine(ResetRobot());
             return;
         }
-
+        transform.LookAt(cam);
         Vector3 dir = (cam.position - transform.position).normalized;
         transform.position += dir * speed * Time.deltaTime;
     }
